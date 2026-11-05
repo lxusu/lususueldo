@@ -11,7 +11,7 @@
     <!-- Google Fonts: Fraunces (titulos) + Figtree (texto) + tipografias de stickers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Pinyon+Script&family=Pirata+One&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -113,7 +113,7 @@
         .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem;
                    border-bottom: 2px dotted var(--b); padding-bottom: .55rem; margin-bottom: .7rem; }
         .job-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; font-variation-settings: 'SOFT' 100; color: var(--c); }
-        .job-date { font-size: 11px; font-weight: 700; color: #fff; background: var(--c); border-radius: 9999px; padding: .2rem .7rem; white-space: nowrap; }
+        .job-date { font-size: 12px; font-weight: 700; color: #fff; background: var(--c); border-radius: 9999px; padding: .2rem .7rem; white-space: nowrap; }
         .job-list { display: flex; flex-direction: column; gap: .45rem; font-size: 14px; line-height: 1.5; font-weight: 500; }
         .job-list strong { color: var(--c); font-weight: 700; }
         /* Barra compacta: no ocupa lugar en el flujo, se desliza desde arriba */
@@ -125,7 +125,7 @@
         .cv-mini.show { transform: none; opacity: 1; pointer-events: auto; }
         .cv-mini-name { font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 1.45rem; color: #4C042D;
                         font-variation-settings: 'SOFT' 100, 'WONK' 1; white-space: nowrap; }
-        .cv-mini-tag { font-size: 11.5px; font-weight: 600; color: #5C4450; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
+        .cv-mini-tag { font-size: 12px; font-weight: 600; color: #5C4450; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
         .lang-switch.lang-mini { position: static; flex: none; }
 
         /* Contacto fijo abajo del CV */
@@ -142,7 +142,7 @@
         .contact-row { display: flex; align-items: center; gap: .6rem; padding: .55rem .75rem; border-radius: 1rem; background: #F6EEF2;
                        color: #340417; font-weight: 700; font-size: 13px; transition: background .15s; }
         .contact-row:hover { background: #EFDCE7; }
-        .contact-row small { margin-left: auto; font-size: 10px; color: #4C042D; letter-spacing: .06em; text-transform: uppercase; }
+        .contact-row small { margin-left: auto; font-size: 12px; color: #4C042D; letter-spacing: .06em; text-transform: uppercase; }
 
         /* Cerrar panel (escritorio) */
         .panel-close { position: absolute; top: 1rem; right: 1rem; z-index: 30; cursor: pointer; }
@@ -152,7 +152,7 @@
         /* Selector de idioma */
         .lang-switch { position: absolute; top: 1rem; right: 1rem; z-index: 5; display: inline-flex; gap: 2px; padding: 3px;
                        background: #fff; border: 2px dashed #D9B3CB; border-radius: 9999px; box-shadow: 3px 3px 0 0 #EEDCE6; }
-        .lang-switch button { font-size: 11px; font-weight: 700; letter-spacing: .08em; padding: .3rem .7rem; border-radius: 9999px;
+        .lang-switch button { font-size: 12px; font-weight: 700; letter-spacing: .08em; padding: .3rem .7rem; border-radius: 9999px;
                               color: #4C042D; cursor: pointer; transition: background .15s; }
         .lang-switch button:hover { background: #F6EEF2; }
         .lang-switch button[aria-pressed="true"] { background: #4C042D; color: #FFFFFF; }
@@ -182,16 +182,16 @@
         .coord-scroll::-webkit-scrollbar-track { background: transparent; }
         .coord-scroll::-webkit-scrollbar-thumb { background: #9E4A7E; border-color: #fff; }
 
-        .chip { display: inline-flex; align-items: center; gap: .35rem; font-weight: 700; font-size: 11px; letter-spacing: .02em;
+        .chip { display: inline-flex; align-items: center; gap: .35rem; font-weight: 700; font-size: 12px; letter-spacing: .02em;
                 background: #fff; border-radius: 9999px; padding: .3rem .8rem; border: 1.5px solid; box-shadow: 0 1px 2px rgba(52,4,23,.06); }
         .chip-blue { color: #5E1240; border-color: #9E4A7E; }
         .chip-pink { color: #8A2D63; border-color: #E19FC7; }
 
         .kpi { background: #fff; border: 2px dashed var(--b); border-radius: 1.5rem; padding: .9rem 1rem;
                box-shadow: 4px 4px 0 0 var(--s); display: flex; flex-direction: column; gap: .15rem; }
-        .kpi-label { font-size: 11px; font-weight: 700; color: var(--c); text-transform: uppercase; letter-spacing: .04em; }
+        .kpi-label { font-size: 12px; font-weight: 700; color: var(--c); text-transform: uppercase; letter-spacing: .04em; }
         .kpi-value { font-family: 'Fraunces', serif; font-size: clamp(1.35rem, 1.9vw, 1.9rem); line-height: 1.1; color: #340417; white-space: nowrap; }
-        .kpi-sub { font-size: 11px; font-weight: 600; color: #6E5260; }
+        .kpi-sub { font-size: 12px; font-weight: 600; color: #6E5260; }
 
         .metric-tab { font-weight: 700; font-size: 12px; padding: .4rem .9rem; border-radius: 9999px; border: 1.5px dashed #9E4A7E;
                       color: #5E1240; background: #fff; cursor: pointer; transition: all .15s; }
@@ -232,8 +232,8 @@
         .swiss .media-tile { aspect-ratio: var(--ar); }
         .sp-3 { grid-column: span 3; } .sp-4 { grid-column: span 4; } .sp-6 { grid-column: span 6; } .sp-12 { grid-column: span 12; }
         @media (max-width: 640px) { .sp-3, .sp-4 { grid-column: span 6; } .sp-6 { grid-column: span 12; } }
-        .fmt-label { grid-column: 1 / -1; display: flex; align-items: center; gap: .6rem; font-size: 10px; font-weight: 700;
-                     letter-spacing: .12em; text-transform: uppercase; color: #7E6670; margin-top: .25rem; }
+        .fmt-label { grid-column: 1 / -1; display: flex; align-items: center; gap: .6rem; font-size: 12px; font-weight: 700;
+                     letter-spacing: .12em; text-transform: uppercase; color: #6A5060; margin-top: .25rem; }
         .fmt-label::after { content: ''; flex: 1; border-top: 1px solid #E2D3D9; }
         .sec { position: relative; margin: 2.5rem 0 3rem; }
         .sec-head { display: grid; grid-template-columns: auto auto 1fr; align-items: baseline; gap: .75rem;
@@ -244,8 +244,8 @@
                       align-items: center; gap: .9rem; max-width: 60%; flex-wrap: wrap-reverse; justify-content: flex-start; }
         .sec-notes { display: flex; flex-direction: column; gap: .2rem; margin: -.4rem 0 1.15rem; padding-right: 40%; }
         .sec-note { position: relative; padding-left: 1.1rem; font-size: 13px; font-weight: 600; line-height: 1.45; color: #5C4450; }
-        .sec-note::before { content: '✦'; position: absolute; left: 0; top: 0; color: var(--ft); font-size: 11px; }
-        .sec-credit { padding-left: 1.1rem; font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--ft); }
+        .sec-note::before { content: '✦'; position: absolute; left: 0; top: 0; color: var(--ft); font-size: 12px; }
+        .sec-credit { padding-left: 1.1rem; font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--ft); }
         @media (max-width: 640px) {
             .sec.has-stk .sec-head { padding-right: 0; }
             .sec-notes { padding-right: 0; }
@@ -253,7 +253,7 @@
         }
         .sec-num { font-family: 'Fraunces', serif; font-size: 1.6rem; line-height: 1; color: var(--ft); }
         .sec-title { font-weight: 700; font-size: .95rem; color: #340417; }
-        .sec-count { font-size: 11px; font-weight: 700; color: #7E6670; letter-spacing: .06em; }
+        .sec-count { font-size: 12px; font-weight: 700; color: #6A5060; letter-spacing: .06em; }
 
         .filter-bar { position: sticky; top: 0; z-index: 10; display: flex; gap: .4rem; overflow-x: auto; scrollbar-width: none;
                       padding: .6rem; margin: 1.25rem 0 1.5rem; background: rgba(255,255,255,.92); backdrop-filter: blur(6px);
@@ -262,7 +262,7 @@
         .ftab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .4rem; height: 2rem; padding: 0 .9rem; border-radius: 9999px;
                 font-size: 12px; font-weight: 700; color: #340417; background: transparent; white-space: nowrap; cursor: pointer; transition: background .15s; }
         .ftab:hover { background: var(--fb); }
-        .ftab .n { font-size: 10px; min-width: 1.25rem; height: 1.25rem; padding: 0 .3rem; border-radius: 9999px; background: var(--fb);
+        .ftab .n { font-size: 12px; min-width: 1.25rem; height: 1.25rem; padding: 0 .3rem; border-radius: 9999px; background: var(--fb);
                    color: var(--ft); display: inline-flex; align-items: center; justify-content: center; }
         .ftab[aria-pressed="true"] { background: var(--ft); color: #fff; }
         .ftab[aria-pressed="true"] .n { background: rgba(255,255,255,.3); color: #fff; }
@@ -273,7 +273,7 @@
         .play-badge { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
         .play-badge span { width: 3rem; height: 3rem; border-radius: 9999px; background: rgba(255,255,255,.92); color: #BA6595;
                            display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(52,4,23,.18); padding-left: 3px; }
-        .tile-caption { position: absolute; left: .4rem; right: .4rem; bottom: .4rem; font-size: 10px; font-weight: 700; color: #340417;
+        .tile-caption { position: absolute; left: .4rem; right: .4rem; bottom: .4rem; font-size: 12px; font-weight: 700; color: #340417;
                         background: rgba(255,255,255,.9); border-radius: .6rem; padding: .25rem .45rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Stickers de roles */
@@ -288,7 +288,7 @@
         .stk-lilac   { background: #E8C9DB; color: #130E12; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.45rem; }
         /* Cinta de papel con la descripción del rol */
         .stk-tape { position: relative; display: inline-block; max-width: 22rem; padding: .3rem .75rem .32rem;
-                    background: rgba(226, 212, 186, .92); color: #4a3a26; font-size: 10px; font-weight: 700; line-height: 1.35;
+                    background: rgba(226, 212, 186, .92); color: #4a3a26; font-size: 12px; font-weight: 700; line-height: 1.35;
                     letter-spacing: .06em; text-transform: uppercase; transform: rotate(var(--tilt, -2deg));
                     box-shadow: 0 1px 2px rgba(0,0,0,.1);
                     clip-path: polygon(0 8%, 3% 0, 7% 10%, 11% 2%, 100% 0, 98% 30%, 100% 55%, 97% 80%, 100% 100%, 6% 100%, 2% 90%, 0 100%, 3% 60%, 0 35%); }
@@ -327,15 +327,15 @@
         .gal-sub { margin-top: .3rem; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ft); }
         .gal-intro { margin-top: 1rem; display: flex; flex-direction: column; gap: .35rem; }
         .gal-intro .sec-note { font-size: 14px; }
-        .gal-disclaimer { margin-top: .9rem; font-size: 12px; font-style: italic; font-weight: 500; color: #7E6670;
+        .gal-disclaimer { margin-top: .9rem; font-size: 12px; font-style: italic; font-weight: 500; color: #6A5060;
                           padding: .55rem .8rem; border-left: 3px solid var(--fbo); background: var(--fb); border-radius: 0 .75rem .75rem 0; }
         .pdf-tile { display: flex; align-items: center; gap: .9rem; padding: 1rem 1.1rem; border-radius: 1rem; background: #fff;
                     border: 2px dashed var(--fbo); box-shadow: 4px 4px 0 0 var(--fs); color: #340417; transition: transform .15s; }
         .pdf-tile:hover { transform: translateY(-2px); }
         .pdf-tile b { display: block; font-size: 14px; }
-        .pdf-tile small { font-size: 11px; font-weight: 700; color: var(--ft); letter-spacing: .06em; text-transform: uppercase; }
+        .pdf-tile small { font-size: 12px; font-weight: 700; color: var(--ft); letter-spacing: .06em; text-transform: uppercase; }
         .pdf-ico { flex: none; width: 2.8rem; height: 3.4rem; border-radius: .5rem; background: var(--holo); display: flex; align-items: center;
-                   justify-content: center; font-size: 11px; font-weight: 800; letter-spacing: .06em; color: #340417; border: 1.5px solid var(--fbo); }
+                   justify-content: center; font-size: 12px; font-weight: 800; letter-spacing: .06em; color: #340417; border: 1.5px solid var(--fbo); }
 
         /* Lightbox */
         #lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(52, 4, 23, .82); backdrop-filter: blur(6px);
@@ -346,6 +346,128 @@
         .lb-btn { position: absolute; width: 3rem; height: 3rem; border-radius: 9999px; background: #fff; color: #340417; font-weight: 700;
                   font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: 3px 3px 0 0 #E19FC7; }
         .lb-btn:hover { background: #F7EAF2; }
+
+        /* =====================================================================
+           AJUSTES UX/UI v2 — jerarquía y roles claros
+           Colores: vino #4C042D = acciones/énfasis · rosa antiguo #BA6595 / #9E3F73 = acentos ·
+                    blush #F0D3E4 = fondos suaves · tinta #130E12 = bloque fuerte
+           Tipografía: Pinyon Script (solo el nombre) · Fraunces (títulos de sección) ·
+                       Figtree (todo lo demás) · Pirata One (acento: stickers)
+           Bordes: punteado SOLO en carpetas; el resto, línea fina sólida. Sombra de color solo en hover/activo.
+           ===================================================================== */
+        /* Encabezado: bloque vino oscuro con el nombre */
+        .cv-header { margin: .9rem .9rem 0; padding: 2.9rem 1.75rem 1.6rem; border-radius: 1.75rem; text-align: center; color: #fff;
+                     background-color: #4C042D; background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 14px 14px; }
+        .cv-name { font-family: 'Pinyon Script', cursive; font-style: normal; font-weight: 400; font-variation-settings: normal; letter-spacing: 0;
+                   font-size: clamp(3.4rem, 5.6vw, 5.1rem); line-height: 1.15; color: #fff; text-shadow: 3px 3px 0 #9E3F73; }
+        .cv-tagline { display: block; margin-top: .55rem; padding: 0; background: none; border: 0; box-shadow: none; color: #F0D3E4;
+                      font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+        .cv-header-foot { margin-top: 1.3rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem 1rem; }
+        .cv-loc { margin: 0; font-size: 12px; color: #E19FC7; letter-spacing: .16em; }
+        .contact-top { display: inline-flex; align-items: center; gap: .45rem; padding: .6rem 1.15rem; border-radius: 9999px; background: #fff;
+                       color: #4C042D; font-size: 13px; font-weight: 700; cursor: pointer; transition: transform .18s ease, background .18s ease; }
+        .contact-top:hover { background: #F0D3E4; transform: translateY(-1px); }
+        .cv-header .lang-switch { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.28); box-shadow: none; }
+        .cv-header .lang-switch button { color: #fff; }
+        .cv-header .lang-switch button:hover { background: rgba(255,255,255,.12); }
+        .cv-header .lang-switch button[aria-pressed="true"] { background: #fff; color: #4C042D; }
+        .lang-switch { border: 1px solid #E3CBD6; box-shadow: none; }
+        .lang-switch button { font-size: 12px; }
+        .cv-mini { border-bottom: 1px solid #EADDE3; }
+        .cv-mini-name { font-family: 'Pinyon Script', cursive; font-style: normal; font-weight: 400; font-variation-settings: normal; font-size: 1.7rem; color: #4C042D; }
+        .cv-mini-tag { font-size: 12px; }
+        .contact-mini { flex: none; padding: .38rem .85rem; border-radius: 9999px; background: #4C042D; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer; }
+        .contact-mini:hover { background: #340417; }
+        /* Contacto: en escritorio vive arriba; abajo solo en celular, sobre franja sólida */
+        .cv-contact { background: #FBF6F5; border-top: 1px solid #EADDE3; padding: .75rem 1rem; }
+        @media (min-width: 1024px) { .cv-contact { display: none; } }
+        @media (max-width: 1023px) { .contact-top { display: none; } }
+        .contact-btn { border: 0; box-shadow: none; }
+        .contact-pop { position: fixed; z-index: 90; width: min(21rem, calc(100vw - 24px)); margin: 0; border: 1px solid #E3CBD6;
+                       border-radius: 1.25rem; box-shadow: 0 18px 40px rgba(52, 4, 23, .18); }
+        .contact-row { font-size: 14px; background: #F8EFF3; }
+        .contact-row:hover { background: #F0D3E4; }
+        .contact-row small { font-size: 12px; color: #9E3F73; }
+
+        /* Bordes finos y sólidos; sombra solo al interactuar */
+        .cv-box, .job-card { border: 1px solid var(--b); box-shadow: none; }
+        .kpi { border: 1px solid #EADDE3; box-shadow: none; }
+        .gal-hero { border: 1px solid var(--fbo); box-shadow: none; }
+        .filter-bar { border: 1px solid #EADDE3; box-shadow: 0 8px 20px rgba(52, 4, 23, .06); }
+        .pdf-tile { border: 1px solid var(--fbo); box-shadow: none; }
+        .metric-tab { border: 1px solid #E3CBD6; font-size: 13px; }
+        .chip { border-width: 1px; font-size: 12px; }
+        .chart-tip { border: 1px solid #E3CBD6; box-shadow: 0 10px 24px rgba(52, 4, 23, .12); }
+        .media-tile { box-shadow: none; }
+        .media-tile:hover { box-shadow: 5px 5px 0 0 var(--ft, #9E3F73); }
+        .folder-body { box-shadow: none; }
+        .folder:hover .folder-body { border-style: solid; border-color: var(--ft); box-shadow: 7px 7px 0 0 var(--ft); }
+        .job-card:hover { box-shadow: 7px 7px 0 0 var(--c); }
+        .cv-box:hover { box-shadow: 5px 5px 0 0 #E3CBD6; }
+        .kpi:hover { box-shadow: 5px 5px 0 0 var(--c); }
+
+        /* Tarjetas de experiencia: resumen en etiquetas; el detalle se despliega al seleccionarlas */
+        .job-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+        .job-tags span { font-size: 12px; font-weight: 600; color: var(--c); background: var(--bg); border: 1px solid var(--b);
+                         border-radius: 9999px; padding: .22rem .7rem; }
+        .job-card:not(.active) .job-list { display: none; }
+        .job-card.active .job-tags { display: none; }
+        .job-cta { display: inline-flex; align-items: center; gap: .35rem; margin-top: .9rem; font-size: 13px; font-weight: 700; color: var(--c); }
+        .job-cta span { transition: transform .2s ease; }
+        .job-card:hover .job-cta span { transform: translateX(5px); }
+        .job-card.active .job-cta { display: none; }
+        .job-title { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 16px; font-variation-settings: normal; letter-spacing: -.005em; }
+        .job-list { font-size: 14px; }
+
+        /* Tipografía: Fraunces solo en títulos de sección; Figtree en tarjetas y números */
+        .folder h4, .gal-folder h4 { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 15px; font-variation-settings: normal; }
+        .kpi-value { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: clamp(1.4rem, 1.9vw, 1.8rem); letter-spacing: -.01em; }
+        .kpi-label, .kpi-sub, .sec-count, .fmt-label, .gal-sub, .cv-h3-sub { font-size: 12px; }
+        .cv-h2 { font-size: 1.55rem; }
+        .cv-h3 { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: .02em; text-transform: uppercase; font-variation-settings: normal; color: #9E3F73; }
+        .cv-h3-sub { text-transform: none; letter-spacing: 0; color: #6A5060; font-weight: 600; }
+        /* Stickers: una sola tipografía de acento (gótica), cuatro tratamientos de color */
+        .stk-word { font-family: 'Pirata One', serif; font-style: normal; text-transform: none; font-size: 1.35rem; letter-spacing: .01em; padding: .22rem .6rem .3rem; }
+        .stk-ink     { background: #130E12; color: #FFFFFF; border: 0; }
+        .stk-rose    { background: #F0D3E4; color: #340417; border: 0; }
+        .stk-outline { background: #FFFFFF; color: #4C042D; border: 2px solid #4C042D; }
+        .stk-lilac   { background: #9E3F73; color: #FFFFFF; border: 0; }
+
+        /* Panel derecho: gingham más chico y tenue */
+        .bg-gingham-blue {
+            background-color: #FBF3F5;
+            background-image:
+                repeating-linear-gradient(90deg, transparent, transparent 12px, rgba(186, 101, 149, 0.08) 12px, rgba(186, 101, 149, 0.08) 24px),
+                repeating-linear-gradient(0deg, transparent, transparent 12px, rgba(186, 101, 149, 0.08) 12px, rgba(186, 101, 149, 0.08) 24px);
+        }
+
+        /* Pantalla de inicio: proyectos destacados */
+        .home { padding: .25rem .25rem 2rem; text-align: left; }
+        .home-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #9E3F73; }
+        .home-title { font-family: 'Fraunces', serif; font-weight: 600; font-variation-settings: 'SOFT' 100, 'opsz' 96;
+                      font-size: clamp(2rem, 3.2vw, 2.9rem); line-height: 1.05; color: #340417; margin: .35rem 0 1.25rem; }
+        .home-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin-bottom: 1.5rem; }
+        .home-stats > div { border-radius: 1.25rem; padding: 1rem 1.1rem 1.1rem; color: #fff; background: #4C042D; }
+        .home-stats > div:nth-child(2) { background: #130E12; }
+        .home-stats > div:nth-child(3) { background: #9E3F73; }
+        .home-stats b { display: block; font-family: 'Fraunces', serif; font-weight: 600; font-size: 2.1rem; line-height: 1; }
+        .home-stats span { display: block; margin-top: .45rem; font-size: 13px; line-height: 1.35; color: #F6DCEA; }
+        .home-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }
+        @media (max-width: 1280px) { .home-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        .home-tile { position: relative; display: flex; flex-direction: column; text-align: left; background: #fff; border: 1px solid #EADDE3;
+                     border-radius: 1.25rem; overflow: hidden; cursor: pointer; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+        .home-tile:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 0 #4C042D; border-color: #4C042D; }
+        .home-cover { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #F7EAF2; }
+        .home-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        .home-tile:hover .home-cover img { transform: scale(1.05); }
+        .home-meta { display: flex; flex-direction: column; gap: .15rem; padding: .7rem .9rem .9rem; }
+        .home-meta small { font-size: 12px; font-weight: 600; color: #9E3F73; }
+        .home-meta b { font-size: 15px; font-weight: 700; color: #340417; }
+        .home-arrow { position: absolute; top: .6rem; right: .6rem; width: 2.1rem; height: 2.1rem; border-radius: 9999px; background: #fff; color: #4C042D;
+                      display: flex; align-items: center; justify-content: center; font-weight: 700; opacity: 0; transform: translateX(-4px); transition: all .22s ease; }
+        .home-tile:hover .home-arrow { opacity: 1; transform: none; }
+        .home-hint { margin-top: 1.4rem; font-size: 13px; color: #6A5060; }
+        #state-initial:not(.hidden) { display: block; }
     </style>
 </head>
 <body class="flex flex-col lg:flex-row w-full h-screen selection:bg-[#E19FC7] selection:text-[#340417]">
@@ -358,6 +480,7 @@
             <div id="cv-mini" class="cv-mini">
                 <span class="cv-mini-name">Lucía Sueldo</span>
                 <span class="cv-mini-tag" data-i18n="tagline_short">Dirección de Diseño & Marketing</span>
+                <button type="button" class="contact-trigger contact-mini" aria-haspopup="dialog" data-i18n="contact_short">Contactame</button>
                 <div class="lang-switch lang-mini" role="group" aria-label="Idioma / Language">
                     <button type="button" data-lang="es" aria-pressed="true">ES</button>
                     <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -371,26 +494,28 @@
                 <button type="button" data-lang="es" aria-pressed="true">ES</button>
                 <button type="button" data-lang="en" aria-pressed="false">EN</button>
             </div>
-            <h1 class="cv-name">Lucía Sueldo<span class="cv-star" aria-hidden="true">✦</span></h1>
+            <h1 class="cv-name">Lucía Sueldo</h1>
             <p class="cv-tagline" data-i18n="tagline">Dirección de Diseño & Marketing</p>
-            <p class="cv-loc" data-i18n="location">Argentina</p>
+            <div class="cv-header-foot">
+                <p class="cv-loc" data-i18n="location">Argentina</p>
+                <button type="button" class="contact-trigger contact-top" aria-haspopup="dialog"><span aria-hidden="true">✉</span> <span data-i18n="contact_cta">¿Trabajamos juntos? Contactame</span></button>
+            </div>
         </header>
 
         <!-- PERFIL PROFESIONAL -->
         <section class="cv-sec">
             <h2 class="cv-h2"><span class="orn" aria-hidden="true">✦</span> <span data-i18n="h_profile">Perfil profesional</span></h2>
-            <div class="cv-box" style="--b:#E19FC7;--s:#F0D3E4" data-i18n="profile">Diseñadora Gráfica y especialista en marketing digital. Combino la dirección creativa con la gestión de pauta y análisis de performance (ROAS). Experiencia estructurando identidades de marca, coordinando equipos y ejecutando campañas de conversión para retail y cuentas corporativas.</div>
+            <div class="cv-box" style="--b:#E3CBD6" data-i18n="profile">Diseñadora Gráfica y especialista en marketing digital. Combino la dirección creativa con la gestión de pauta y análisis de performance (ROAS). Experiencia estructurando identidades de marca, coordinando equipos y ejecutando campañas de conversión para retail y cuentas corporativas.</div>
         </section>
 
         <!-- EXPERIENCIA PROFESIONAL (INTERACTIVA) -->
         <section class="cv-sec">
             <h2 class="cv-h2"><span class="orn" aria-hidden="true">✦</span> <span data-i18n="h_exp">Experiencia profesional</span></h2>
-            <p class="cv-hint" data-i18n="hint">Hacé click en las tarjetas para desplegar la información</p>
 
             <!-- TRABAJOS ACTUALES & FREELANCE -->
             <div class="mb-8">
                 <h3 class="cv-h3" data-i18n="act_h">Trabajos Actuales & Freelance</h3>
-                <div class="job-card" style="--b:#BA6595;--s:#EBD5E2;--c:#4C042D;--bg:#F6EEF2" data-target="actuales">
+                <div class="job-card" style="--b:#E3CBD6;--c:#4C042D;--bg:#F8EFF3" data-target="actuales">
                     <div class="job-top">
                         <h4 class="job-title" data-i18n="act_t">Últimos trabajos realizados</h4>
                         <span class="job-date">2026</span>
@@ -405,7 +530,7 @@
             <div class="mb-8">
                 <h3 class="cv-h3">Indonesia Shop <span class="cv-h3-sub">(Indonesia, Captain Fin, Zimith)</span></h3>
 
-                <div class="job-card mb-5" style="--b:#9E4A7E;--s:#E5CEDD;--c:#5E1240;--bg:#F1E5EE" data-target="indonesia-coord">
+                <div class="job-card mb-5" style="--b:#E3CBD6;--c:#4C042D;--bg:#F8EFF3" data-target="indonesia-coord">
                     <div class="job-top">
                         <h4 class="job-title" data-i18n="coord_t">Coordinadora de Marketing</h4>
                         <span class="job-date">Oct 2025 – Oct 2026</span>
@@ -418,7 +543,7 @@
                     </ul>
                 </div>
 
-                <div class="job-card" style="--b:#E19FC7;--s:#F0D3E4;--c:#8A2D63;--bg:#F8EEF3" data-target="indonesia-diseno">
+                <div class="job-card" style="--b:#EFCFDF;--c:#9E3F73;--bg:#FBF0F5" data-target="indonesia-diseno">
                     <div class="job-top">
                         <h4 class="job-title" data-i18n="dis_t">Diseñadora Gráfica & Asistente</h4>
                         <span class="job-date">Sep 2024 – Oct 2025</span>
@@ -433,7 +558,7 @@
             <!-- AUGEN SIMES -->
             <div class="mb-8">
                 <h3 class="cv-h3">Augen Simes</h3>
-                <div class="job-card" style="--b:#A8919C;--s:#DCD0D4;--c:#3A1F2C;--bg:#F0EBEA" data-target="augen">
+                <div class="job-card" style="--b:#EFCFDF;--c:#9E3F73;--bg:#FBF0F5" data-target="augen">
                     <div class="job-top">
                         <h4 class="job-title" data-i18n="aug_t">Diseño gráfico y Project Management</h4>
                         <span class="job-date">Jul 2023 – Sep 2024</span>
@@ -450,7 +575,7 @@
         <!-- STACK -->
         <section class="cv-sec">
             <h2 class="cv-h2"><span class="orn" aria-hidden="true">✦</span> <span data-i18n="h_stack">Especificaciones técnicas</span></h2>
-            <div class="cv-box cv-defs" style="--b:#BA6595;--s:#EBD5E2">
+            <div class="cv-box cv-defs" style="--b:#E3CBD6">
                 <p><strong data-i18n="s1">Growth & Datos</strong> Meta Ads Manager, Google Ads, Tiendanube, Flexxus ERP, Power BI.</p>
                 <p><strong data-i18n="s2">Diseño & Audiovisual</strong> Figma, Adobe Creative Cloud (Illustrator, Photoshop, InDesign, Premiere Pro, After Effects), CapCut, TouchDesigner.</p>
                 <p><strong data-i18n="s3">Inteligencia Artificial</strong> <span data-i18n="s3d">Prompt Engineering avanzado (Claude, Gemini, GenType, ChatGPT).</span></p>
@@ -461,7 +586,7 @@
         <!-- EDUCACIÓN -->
         <section class="cv-sec pb-4">
             <h2 class="cv-h2"><span class="orn" aria-hidden="true">✦</span> <span data-i18n="h_edu">Educación</span></h2>
-            <div class="cv-box cv-defs" style="--b:#9E4A7E;--s:#E5CEDD">
+            <div class="cv-box cv-defs" style="--b:#E3CBD6">
                 <p><strong data-i18n="e1">Licenciatura en Diseño (Mención Gráfico)</strong> <span data-i18n="e1d">FAD - UPC (En curso)</span></p>
                 <p><strong>Meta & Google Ads</strong> <span data-i18n="e2d">Luzzi Digital (En curso)</span></p>
                 <p><strong>Responsive Web Design (HTML/CSS)</strong> freeCodeCamp (2026)</p>
@@ -470,18 +595,20 @@
             </div>
         </section>
 
-        <!-- CONTACTO FIJO: siempre visible abajo mientras se scrollea el CV -->
+        <!-- CONTACTO (celular): fijo abajo sobre una franja sólida. En escritorio el contacto está arriba -->
         <div class="cv-contact">
-            <div id="contact-pop" class="contact-pop" hidden role="dialog" aria-labelledby="contact-title">
-                <p id="contact-title" class="font-serif text-xl text-[#340417]" data-i18n="contact_h">Hablemos</p>
-                <p class="text-xs font-semibold text-[#7E6670] mb-3" data-i18n="contact_d">Elegí por dónde escribirme:</p>
-                <div id="contact-list" class="flex flex-col gap-2"></div>
-            </div>
-            <button id="contact-btn" type="button" class="contact-btn" aria-expanded="false" aria-controls="contact-pop">
+            <button id="contact-btn" type="button" class="contact-btn contact-trigger" aria-haspopup="dialog">
                 <span aria-hidden="true">✉</span> <span data-i18n="contact_cta">¿Trabajamos juntos? Contactame</span>
             </button>
         </div>
     </aside>
+
+    <!-- Tarjeta de contacto (se abre desde cualquier botón "Contactame") -->
+    <div id="contact-pop" class="contact-pop" hidden role="dialog" aria-labelledby="contact-title">
+        <p id="contact-title" class="font-serif text-xl text-[#340417]" data-i18n="contact_h">Hablemos</p>
+        <p class="text-sm font-medium text-[#5C4450] mb-3" data-i18n="contact_d">Elegí por dónde escribirme:</p>
+        <div id="contact-list" class="flex flex-col gap-2"></div>
+    </div>
 
     <!-- COLUMNA DERECHA: PORTFOLIO (55% Width, Fixed/Sticky Canvas) -->
     <!-- Fondo oscurecido detrás de la hoja (solo celular/tablet) -->
@@ -505,11 +632,17 @@
         </div>
         
         <!-- ESTADO INICIAL -->
-        <div id="state-initial" class="portfolio-state flex flex-col items-center justify-center text-center w-full h-full">
-            <div class="bg-white rounded-3xl border-4 border-dashed border-[#E19FC7] p-10 shadow-[8px_8px_0px_0px_#F0D3E4] transform rotate-1 hover:rotate-0 transition-transform max-w-sm">
-                <span class="block mb-4 text-4xl text-[#BA6595]">✦</span>
-                <h2 class="font-serif text-3xl font-bold mb-2 text-[#BA6595]" data-i18n="hello">¡Hola!</h2>
-                <p class="font-medium text-[#340417] bg-[#F7EAF2] px-4 py-2 rounded-full border border-dashed border-[#E19FC7]" data-i18n="hello_d">Seleccioná una tarjeta a la izquierda para ver los proyectos.</p>
+        <div id="state-initial" class="portfolio-state w-full h-full">
+            <div class="home coord-scroll w-full h-full overflow-y-auto pr-1 lg:pr-3">
+                <p class="home-eyebrow" data-i18n="home_eb">Portfolio · 2023 — 2026</p>
+                <h2 class="home-title" data-i18n="home_t">Proyectos destacados</h2>
+                <div class="home-stats">
+                    <div><b data-i18n="hs1v">54,7 M</b><span data-i18n="hs1">visualizaciones en Instagram en un año</span></div>
+                    <div><b>249</b><span data-i18n="hs2">compras generadas por un solo anuncio</span></div>
+                    <div><b>21</b><span data-i18n="hs3">proyectos de diseño, campaña y retail</span></div>
+                </div>
+                <div id="home-grid" class="home-grid"></div>
+                <p class="home-hint" data-i18n="home_hint">O elegí una experiencia en la columna de la izquierda para ver todo el trabajo.</p>
             </div>
         </div>
 
@@ -551,7 +684,7 @@
                     </div>
 
                     <!-- Gráfico principal -->
-                    <div class="bg-white rounded-[2rem] border-2 border-dashed border-[#9E4A7E] shadow-[6px_6px_0px_0px_rgba(158,74,126,0.4)] p-5 lg:p-6">
+                    <div class="bg-white rounded-[2rem] border border-[#9E4A7E] p-5 lg:p-6">
                         <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
                             <div>
                                 <h3 class="font-serif text-2xl text-[#340417]" data-i18n="chart_h">Evolución mes a mes</h3>
@@ -563,14 +696,14 @@
                             <svg id="coord-chart" class="w-full h-auto block" role="img"></svg>
                             <div id="chart-tip" class="chart-tip" hidden></div>
                         </div>
-                        <p class="text-[11px] font-semibold text-[#8A5A72] mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
+                        <p class="text-[12px] font-semibold text-[#8A5A72] mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
                             <span data-i18n="chart_note">Los círculos numerados marcan la campaña activa ese mes (ver carpetas abajo).</span>
                             <span data-i18n="source">Fuente: Meta Business Suite.</span>
                         </p>
                     </div>
 
                     <!-- Anuncios ganadores -->
-                    <div class="bg-white rounded-[2rem] border-2 border-dashed border-[#E19FC7] shadow-[6px_6px_0px_0px_rgba(225,159,199,0.4)] p-5 lg:p-6">
+                    <div class="bg-white rounded-[2rem] border border-[#E19FC7] p-5 lg:p-6">
                         <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                             <h3 class="font-serif text-xl text-[#340417]" data-i18n="ads_h">Anuncios que más vendieron</h3>
                             <span class="chip chip-pink" data-i18n="ads_chip">Compras atribuidas · píxel de Meta</span>
@@ -582,7 +715,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-serif text-xl text-[#340417]" data-i18n="win_h">Videos que fueron ganadores</h3>
-                            <span class="text-[11px] font-bold text-[#8A5A72]" data-i18n="swipe">deslizá →</span>
+                            <span class="text-[12px] font-bold text-[#8A5A72]" data-i18n="swipe">deslizá →</span>
                         </div>
                         <div id="winners-strip" class="winners-strip"></div>
                     </div>
@@ -667,7 +800,10 @@
             camp_h: 'Campaigns', camp_d: 'Open each folder to see the paid media, web, video and in-store pieces.',
             back_report: '← Back to report',
             close_panel: '✕ Close', contact_h: "Let's talk", contact_d: 'Pick where to reach me:',
-            contact_cta: "Let's work together · Contact me",
+            contact_cta: "Let's work together · Contact me", contact_short: 'Contact me',
+            home_eb: 'Portfolio · 2023 — 2026', home_t: 'Featured projects',
+            hs1v: '54.7M', hs1: 'Instagram views in one year', hs2: 'purchases driven by a single ad', hs3: 'design, campaign and retail projects',
+            home_hint: 'Or pick an experience in the left column to see all the work.',
         };
         const TITLES = { es: 'Lucía Sueldo | CV & Portfolio Interactivo', en: 'Lucía Sueldo | CV & Interactive Portfolio' };
         const read = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
@@ -721,12 +857,12 @@
 
         /* ---------- Paleta "Hada lila" para las carpetas ---------- */
         const PALETTES = [
-            { fb:'#F7EAF2', fbo:'#E19FC7', ft:'#7A1F52', fs:'#F0D3E4' }, // rosa
-            { fb:'#F3E6EC', fbo:'#BA6595', ft:'#4C042D', fs:'#EBD5E2' }, // lila
-            { fb:'#F1E5EE', fbo:'#9E4A7E', ft:'#5E1240', fs:'#E5CEDD' }, // celeste
-            { fb:'#F0EBEA', fbo:'#A8919C', ft:'#3A1F2C', fs:'#DCD0D4' }, // menta
-            { fb:'#F8EDF3', fbo:'#D98AB8', ft:'#7A1F52', fs:'#F2D9E7' }, // malva
-            { fb:'#EFE9DC', fbo:'#C9B9A3', ft:'#4C042D', fs:'#DDD3BE' }, // pervinca
+            { fb:'#F8EFF3', fbo:'#C99AB2', ft:'#4C042D', fs:'#EBD5E2' }, // rosa
+            { fb:'#FBF0F5', fbo:'#E3AFCB', ft:'#9E3F73', fs:'#F0D3E4' }, // lila
+            { fb:'#F3EFEF', fbo:'#B7A3AD', ft:'#130E12', fs:'#E2D8DC' }, // celeste
+            { fb:'#F8EFF3', fbo:'#C99AB2', ft:'#4C042D', fs:'#EBD5E2' }, // menta
+            { fb:'#FBF0F5', fbo:'#E3AFCB', ft:'#9E3F73', fs:'#F0D3E4' }, // malva
+            { fb:'#F3EFEF', fbo:'#B7A3AD', ft:'#130E12', fs:'#E2D8DC' }, // pervinca
         ];
         const INK = '#340417';
 
@@ -828,12 +964,12 @@
                 const h = Math.max(2, ih * v / max), x = cx - bw / 2, y = M.t + ih - h, r = Math.min(5, h);
                 const isPeak = i === peak;
                 const d = `M${x},${M.t + ih} V${y + r} Q${x},${y} ${x + r},${y} H${x + bw - r} Q${x + bw},${y} ${x + bw},${y + r} V${M.t + ih} Z`;
-                s += `<path class="bar" data-i="${i}" d="${d}" fill="${isPeak ? 'url(#holo-bar)' : '#D9B3CB'}"/>`;
+                s += `<path class="bar" data-i="${i}" d="${d}" fill="${isPeak ? '#4C042D' : '#DCC9D2'}"/>`;
                 if (isPeak) {
                     s += `<text x="${cx}" y="${y - 10}" text-anchor="middle" font-size="13" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
-                    s += `<text x="${cx}" y="${y - 25}" text-anchor="middle" font-size="10" font-weight="700" fill="#7A1F52">${t('✦ PICO', '✦ PEAK')}</text>`;
+                    s += `<text x="${cx}" y="${y - 25}" text-anchor="middle" font-size="11.5" font-weight="700" fill="#9E3F73">${t('✦ PICO', '✦ PEAK')}</text>`;
                 }
-                s += `<text x="${cx}" y="${M.t + ih + 16}" text-anchor="middle" font-size="10.5" font-weight="600" fill="#5C4450">${months[i]}</text>`;
+                s += `<text x="${cx}" y="${M.t + ih + 16}" text-anchor="middle" font-size="12" font-weight="600" fill="#5C4450">${months[i]}</text>`;
                 const camps = campaignsByMonth[i] || [];
                 camps.forEach((cm, k) => {
                     const ox = cx + (k - (camps.length - 1) / 2) * 19;
@@ -856,8 +992,8 @@
         function showTip(i, m) {
             svg.querySelectorAll('.bar').forEach(b => b.style.opacity = +b.dataset.i === i ? 1 : .45);
             const camps = (campaignsByMonth[i] || []).map(cm => esc(title(cm.c))).join('<br>');
-            tip.innerHTML = `<div class="text-[10px] uppercase tracking-wider text-[#4C042D] font-bold">${MONTHS[L()][i]}</div><b>${fmt(m.vals[i])}</b> <span class="text-[#6E5260]">${mt(m, 1)}</span>`
-                + (camps ? `<div class="mt-1 pt-1 border-t border-dashed border-[#D98AB8] text-[11px] text-[#7A1F52]">${camps}</div>` : '');
+            tip.innerHTML = `<div class="text-[12px] uppercase tracking-wider text-[#4C042D] font-bold">${MONTHS[L()][i]}</div><b>${fmt(m.vals[i])}</b> <span class="text-[#6E5260]">${mt(m, 1)}</span>`
+                + (camps ? `<div class="mt-1 pt-1 border-t border-dashed border-[#D98AB8] text-[12px] text-[#7A1F52]">${camps}</div>` : '');
             const band = (W - M.l - M.r) / m.vals.length;
             const scale = svg.getBoundingClientRect().width / W;
             const max = Math.max(...m.vals);
@@ -960,7 +1096,7 @@
             if (v.tagName !== 'VIDEO' || !v.closest('.media-tile')) return;
             const ph = document.createElement('div');
             ph.className = 'w-full h-full flex flex-col items-center justify-center gap-2 p-3 text-center bg-gradient-to-br from-[#F7EAF2] to-[#F3E6EC]';
-            ph.innerHTML = `<span class="text-4xl">🎬</span><span class="text-[10px] font-bold text-[#6E5260] leading-snug">${t('Abrí el portfolio en Chrome o Edge para ver este video', 'Open the portfolio in Chrome or Edge to watch this video')}</span>`;
+            ph.innerHTML = `<span class="text-4xl">🎬</span><span class="text-[12px] font-bold text-[#6E5260] leading-snug">${t('Abrí el portfolio en Chrome o Edge para ver este video', 'Open the portfolio in Chrome or Edge to watch this video')}</span>`;
             v.replaceWith(ph);
             const badge = ph.parentElement && ph.parentElement.querySelector('.play-badge');
             if (badge) badge.remove();
@@ -1021,7 +1157,7 @@
                                 <span class="folder-num">${num}</span>
                                 <h4 class="font-serif text-lg leading-tight text-[${INK}]">${esc(title(meta))}</h4>
                             </div>
-                            <span class="text-[11px] font-bold whitespace-nowrap" style="color:${pal.ft}">${imgs.length ? imgs.length + ' 🖼' : ''} ${vids ? ' · ' + vids + ' 🎬' : ''}</span>
+                            <span class="text-[12px] font-bold whitespace-nowrap" style="color:${pal.ft}">${imgs.length ? imgs.length + ' 🖼' : ''} ${vids ? ' · ' + vids + ' 🎬' : ''}</span>
                         </div>
                         <span class="absolute top-4 right-4 chip" style="color:${pal.ft};border-color:${pal.fbo}">${YEAR}</span>
                     </div></button>`;
@@ -1083,13 +1219,13 @@
             const total = groups.reduce((s, g) => s + g.items.length, 0);
             folderView.style.cssText = `--fb:${pal.fb};--fbo:${pal.fbo};--ft:${pal.ft};--fs:${pal.fs}`;
             document.getElementById('folder-head').innerHTML = `
-                <div class="rounded-[2rem] border-2 border-dashed p-5 lg:p-6" style="background:${pal.fb};border-color:${pal.fbo};box-shadow:6px 6px 0 0 ${pal.fs}">
+                <div class="rounded-[2rem] border p-5 lg:p-6" style="background:${pal.fb};border-color:${pal.fbo}">
                     <div class="flex items-center justify-between gap-3">
                         <span class="folder-num">${t('Carpeta', 'Folder')} ${num}</span>
                         <span class="chip" style="color:${pal.ft};border-color:${pal.fbo}">${YEAR}</span>
                     </div>
                     <h3 class="font-serif text-3xl text-[${INK}] mt-1">${esc(title(meta))}</h3>
-                    <p class="text-xs font-bold text-[#7E6670] mt-1">${total} ${t('piezas', 'pieces')} · ${groups.length} ${groups.length === 1 ? t('sección', 'section') : t('secciones', 'sections')}</p>
+                    <p class="text-xs font-bold text-[#6A5060] mt-1">${total} ${t('piezas', 'pieces')} · ${groups.length} ${groups.length === 1 ? t('sección', 'section') : t('secciones', 'sections')}</p>
                 </div>
                 ${groups.length > 1 ? `<nav class="filter-bar" id="folder-filter" aria-label="${t('Filtrar por sección', 'Filter by section')}">
                     <button type="button" class="ftab" data-g="all" aria-pressed="true">${t('Todo', 'All')} <span class="n">${total}</span></button>
@@ -1155,7 +1291,7 @@
             if (!st.folder || st.gal !== 'coord') closeFolder();
             else if (folderView.classList.contains('hidden')) openFolder(st.folder, { silent: true });
         });
-        window.COORD = { backToReport, inFolder: () => !folderView.classList.contains('hidden') };
+        window.COORD = { backToReport, inFolder: () => !folderView.classList.contains('hidden'), open: n => openFolder(n) };
         (window.FOLDER_VIEWS ||= []).push({ inFolder: window.COORD.inFolder, back: backToReport });
         // Piezas compartidas con las otras galerías (Diseñadora, Augen Simes, Trabajos actuales)
         window.PF = { esc, tileHTML, bucketize, PALETTES, STICKER_STYLES, TILTS, YEAR,
@@ -1395,7 +1531,7 @@
                                             <span class="folder-num">${f.key}</span>
                                             <h4 class="font-serif text-lg leading-tight text-[#340417]">${esc(f.title())}</h4>
                                         </div>
-                                        <span class="text-[11px] font-bold whitespace-nowrap" style="color:${pal.ft}">${imgs.length ? imgs.length + ' 🖼' : ''}${vids ? ' · ' + vids + ' 🎬' : ''}</span>
+                                        <span class="text-[12px] font-bold whitespace-nowrap" style="color:${pal.ft}">${imgs.length ? imgs.length + ' 🖼' : ''}${vids ? ' · ' + vids + ' 🎬' : ''}</span>
                                     </div>
                                     ${f.year ? `<span class="absolute top-4 right-4 chip" style="color:${pal.ft};border-color:${pal.fbo}">${f.year}</span>` : ''}
                                 </div></button>`;
@@ -1426,13 +1562,13 @@
                 const en = L() === 'en';
                 root.querySelector('.gal-back').textContent = t('← Volver a ', '← Back to ') + t(...cfg.foldersHeading).toLowerCase();
                 root.querySelector('.gal-head').innerHTML = `
-                    <div class="rounded-[2rem] border-2 border-dashed p-5 lg:p-6" style="background:${pal.fb};border-color:${pal.fbo};box-shadow:6px 6px 0 0 ${pal.fs}">
+                    <div class="rounded-[2rem] border p-5 lg:p-6" style="background:${pal.fb};border-color:${pal.fbo}">
                         <div class="flex items-center justify-between gap-3">
                             <span class="folder-num">${esc(t(...cfg.eyebrow))}</span>
                             ${f.year ? `<span class="chip" style="color:${pal.ft};border-color:${pal.fbo}">${f.year}</span>` : ''}
                         </div>
                         <h3 class="font-serif text-3xl text-[#340417] mt-1">${esc(f.title())}</h3>
-                        <p class="text-xs font-bold text-[#7E6670] mt-1">${total} ${t('piezas', 'pieces')} · ${groups.length} ${groups.length === 1 ? t('sección', 'section') : t('secciones', 'sections')}</p>
+                        <p class="text-xs font-bold text-[#6A5060] mt-1">${total} ${t('piezas', 'pieces')} · ${groups.length} ${groups.length === 1 ? t('sección', 'section') : t('secciones', 'sections')}</p>
                         ${f.tags.length ? `<div class="flex flex-wrap gap-2 mt-3">${f.tags.map(tg => `<span class="chip" style="color:${pal.ft};border-color:${pal.fbo}">${esc(en ? tg[1] : tg[0])}</span>`).join('')}</div>` : ''}
                         ${f.disclaimer ? `<p class="gal-disclaimer mt-3">${esc(t(f.disclaimer, DISCLAIMER_EN))}</p>` : ''}
                     </div>
@@ -1509,6 +1645,7 @@
                 else if (!inFolder()) open(st.folder, { silent: true });
             });
             (window.FOLDER_VIEWS ||= []).push({ inFolder, back });
+            (window.GALLERY_OPEN ||= {})[slug] = key => open(key);
             const render = () => { renderOverview(); if (current && inFolder()) open(current, { silent: true, keepScroll: true }); };
             render();
             document.addEventListener('lang:change', render);
@@ -1585,28 +1722,82 @@
                 instagram: '',  // ej: 'https://www.instagram.com/tuusuario'
                 behance: '',    // ej: 'https://www.behance.net/tuusuario'
             };
-            const contactBtn = document.getElementById('contact-btn');
             const contactPop = document.getElementById('contact-pop');
             const contactList = document.getElementById('contact-list');
             function renderContact() {
                 const tr = window.I18N.t;
                 const rows = [];
-                if (CONTACT.email) rows.push(`<a class="contact-row" href="mailto:${CONTACT.email}">✉ ${CONTACT.email}<small>${tr('Mail', 'Email')}</small></a>`);
-                if (CONTACT.whatsapp) rows.push(`<a class="contact-row" href="https://wa.me/${CONTACT.whatsapp}" target="_blank" rel="noopener">💬 WhatsApp<small>${tr('Mensaje', 'Message')}</small></a>`);
-                if (CONTACT.linkedin) rows.push(`<a class="contact-row" href="${CONTACT.linkedin}" target="_blank" rel="noopener">💼 LinkedIn<small>${tr('Perfil', 'Profile')}</small></a>`);
-                if (CONTACT.instagram) rows.push(`<a class="contact-row" href="${CONTACT.instagram}" target="_blank" rel="noopener">📸 Instagram<small>${tr('Perfil', 'Profile')}</small></a>`);
-                if (CONTACT.behance) rows.push(`<a class="contact-row" href="${CONTACT.behance}" target="_blank" rel="noopener">🎨 Behance<small>Portfolio</small></a>`);
-                contactList.innerHTML = rows.join('') || `<p class="text-sm font-semibold text-[#4C042D]">${tr('Datos de contacto en camino ✨', 'Contact details coming soon ✨')}</p>`;
+                if (CONTACT.email) rows.push(`<a class="contact-row" href="mailto:${CONTACT.email}">${CONTACT.email}<small>${tr('Mail', 'Email')}</small></a>`);
+                if (CONTACT.whatsapp) rows.push(`<a class="contact-row" href="https://wa.me/${CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp<small>${tr('Mensaje', 'Message')}</small></a>`);
+                if (CONTACT.linkedin) rows.push(`<a class="contact-row" href="${CONTACT.linkedin}" target="_blank" rel="noopener">LinkedIn<small>${tr('Perfil', 'Profile')}</small></a>`);
+                if (CONTACT.instagram) rows.push(`<a class="contact-row" href="${CONTACT.instagram}" target="_blank" rel="noopener">Instagram<small>${tr('Perfil', 'Profile')}</small></a>`);
+                if (CONTACT.behance) rows.push(`<a class="contact-row" href="${CONTACT.behance}" target="_blank" rel="noopener">Behance<small>Portfolio</small></a>`);
+                contactList.innerHTML = rows.join('') || `<p class="text-sm font-semibold text-[#4C042D]">${tr('Datos de contacto en camino', 'Contact details coming soon')}</p>`;
             }
-            function toggleContact(open) {
+            // La tarjeta se ubica junto al botón que la abrió (arriba en escritorio, abajo en celular)
+            let contactFrom = null;
+            function toggleContact(open, trigger) {
                 contactPop.hidden = !open;
-                contactBtn.setAttribute('aria-expanded', open);
+                document.querySelectorAll('.contact-trigger').forEach(b => b.setAttribute('aria-expanded', open && b === trigger));
+                contactFrom = open ? trigger : null;
+                if (!open || !trigger) return;
+                const r = trigger.getBoundingClientRect(), pw = contactPop.offsetWidth, ph = contactPop.offsetHeight;
+                const left = Math.max(12, Math.min(window.innerWidth - pw - 12, r.left));
+                const below = r.bottom + 10 + ph < window.innerHeight;
+                contactPop.style.left = left + 'px';
+                contactPop.style.top = (below ? r.bottom + 10 : Math.max(12, r.top - ph - 10)) + 'px';
             }
-            contactBtn.addEventListener('click', e => { e.stopPropagation(); toggleContact(contactPop.hidden); });
-            document.addEventListener('click', e => { if (!contactPop.hidden && !e.target.closest('.cv-contact')) toggleContact(false); });
+            document.querySelectorAll('.contact-trigger').forEach(b => b.addEventListener('click', e => {
+                e.stopPropagation(); toggleContact(contactPop.hidden || contactFrom !== b, b);
+            }));
+            document.addEventListener('click', e => { if (!contactPop.hidden && !e.target.closest('#contact-pop')) toggleContact(false); });
             document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleContact(false); });
+            document.getElementById('cv-col').addEventListener('scroll', () => { if (!contactPop.hidden) toggleContact(false); }, { passive: true });
             document.addEventListener('lang:change', renderContact);
             renderContact();
+
+            /* ---------- Tarjetas de experiencia: resumen en etiquetas + "Ver proyectos →"; al abrirlas se despliega el detalle ---------- */
+            function decorateCards() {
+                cards.forEach(card => {
+                    let tags = card.querySelector('.job-tags');
+                    if (!tags) {
+                        tags = document.createElement('div'); tags.className = 'job-tags';
+                        card.querySelector('.job-list').before(tags);
+                        const cta = document.createElement('span'); cta.className = 'job-cta'; card.appendChild(cta);
+                    }
+                    tags.innerHTML = [...card.querySelectorAll('.job-list strong')]
+                        .map(s => `<span>${s.textContent.replace(/[✦:]/g, '').trim()}</span>`).join('');
+                    card.querySelector('.job-cta').innerHTML = `${window.I18N.t('Ver proyectos', 'View projects')} <span aria-hidden="true">→</span>`;
+                });
+            }
+            decorateCards();
+            document.addEventListener('lang:change', decorateCards);
+
+            /* ---------- Pantalla de inicio: proyectos destacados (abren su carpeta directamente) ---------- */
+            const HOME = [
+                { card: 'indonesia-coord', open: n => window.COORD.open(n), key: '04', cover: () => (window.COORD_COVERS || {})['04'], es: 'Sale de Invierno', en: 'Winter Sale', tag: ['Indonesia Shop · Coordinación', 'Indonesia Shop · Coordination'] },
+                { card: 'indonesia-coord', open: n => window.COORD.open(n), key: '03', cover: () => (window.COORD_COVERS || {})['03'], es: 'Maligno Torres × Vans', en: 'Maligno Torres × Vans', tag: ['Activación BTL', 'BTL activation'] },
+                { card: 'actuales', gal: 'actuales', key: '01', cover: () => { const g = (window.GALLERIES || {}).actuales; const it = g && g.folders[0].groups.flatMap(x => x.items).find(x => x.t === 'img'); return it && it.th; }, es: 'Show 2026 · Depende', en: 'Show 2026 · Depende', tag: ['Pupina Plomer · Identidad visual', 'Pupina Plomer · Visual identity'] },
+                { card: 'indonesia-diseno', gal: 'disenadora', key: '01', cover: () => 'assets/disenadora/covers/01.jpg', es: 'Señalética Fábrica', en: 'Factory Signage', tag: ['Diseño espacial', 'Spatial design'] },
+                { card: 'indonesia-diseno', gal: 'disenadora', key: '06', cover: () => 'assets/disenadora/covers/06.jpg', es: 'No te duermas · Hot Sale', en: "Don't Sleep · Hot Sale", tag: ['Campaña 360', '360 campaign'] },
+                { card: 'augen', gal: 'augen', key: '02', cover: () => 'assets/augen/covers/02.jpg', es: 'Caviahue · Farmacity', en: 'Caviahue · Farmacity', tag: ['Retail design', 'Retail design'] },
+            ];
+            const homeGrid = document.getElementById('home-grid');
+            function renderHome() {
+                const tr = window.I18N.t;
+                homeGrid.innerHTML = HOME.map((h, i) => `<button type="button" class="home-tile" data-i="${i}">
+                        <span class="home-cover">${h.cover() ? `<img src="${h.cover()}" alt="" loading="lazy">` : ''}</span>
+                        <span class="home-meta"><small>${tr(...h.tag)}</small><b>${tr(h.es, h.en)}</b></span>
+                        <span class="home-arrow" aria-hidden="true">→</span></button>`).join('');
+            }
+            homeGrid.addEventListener('click', e => {
+                const tile = e.target.closest('.home-tile'); if (!tile) return;
+                const h = HOME[+tile.dataset.i];
+                document.querySelector(`.job-card[data-target="${h.card}"]`).click();
+                setTimeout(() => { if (h.gal) window.GALLERY_OPEN[h.gal](h.key); else h.open(h.key); }, 30);
+            });
+            renderHome();
+            document.addEventListener('lang:change', renderHome);
 
             /* ---------- Hoja deslizable (celular / tablet) ---------- */
             const mq = window.matchMedia('(max-width: 1023px)');
