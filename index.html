@@ -16,7 +16,7 @@
     <style>
         body {
             font-family: 'Figtree', sans-serif;
-            background-color: #E4DDCB; /* Cream background */
+            background-color: #FBF6F5; /* Blanco perla */
             color: #340417; /* Burgundy text */
             overflow: hidden;
         }
@@ -31,12 +31,12 @@
             width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: #E4DDCB;
+            background: #FBF6F5;
         }
         ::-webkit-scrollbar-thumb {
             background: #E19FC7;
             border-radius: 10px;
-            border: 2px solid #E4DDCB;
+            border: 2px solid #FBF6F5;
         }
 
         /* Patterns */
@@ -46,14 +46,14 @@
 
         .bg-grid-pastel {
             background-image:
-                linear-gradient(to right, rgba(76, 4, 45, 0.09) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(76, 4, 45, 0.09) 1px, transparent 1px);
+                linear-gradient(to right, rgba(186, 101, 149, 0.13) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(186, 101, 149, 0.13) 1px, transparent 1px);
             background-size: 20px 20px;
-            background-color: #E4DDCB;
+            background-color: #FBF6F5;
         }
 
         .bg-gingham-blue {
-            background-color: #EFE9DC;
+            background-color: #FBF1F4;
             background-image:
                 repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(186, 101, 149, 0.11) 20px, rgba(186, 101, 149, 0.11) 40px),
                 repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(186, 101, 149, 0.11) 20px, rgba(186, 101, 149, 0.11) 40px);
@@ -93,8 +93,23 @@
         /* Tarjetas de experiencia */
         .job-card { cursor: pointer; background: #fff; border: 2px dashed var(--b); border-radius: 1.5rem; padding: 1.1rem 1.25rem;
                     box-shadow: 4px 4px 0 0 var(--s); }
-        .job-card:hover { background: var(--bg); }
-        .job-card.active { background: var(--bg); border-style: solid; border-color: var(--c); }
+        /* Hover con color: se levanta, borde sólido, sombra y franja superior del color de la tarjeta */
+        .job-card { position: relative; overflow: hidden; transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease; }
+        .job-card::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--c);
+                            transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+        .job-card:hover { background: var(--bg); border-style: solid; border-color: var(--c); transform: translate(-3px, -3px); box-shadow: 7px 7px 0 0 var(--c); }
+        .job-card:hover::before, .job-card.active::before { transform: scaleX(1); }
+        .job-card:hover .job-title { letter-spacing: .005em; }
+        .job-card.active { background: var(--bg); border-style: solid; border-color: var(--c); transform: translate(2px, 2px); box-shadow: 2px 2px 0 0 var(--c); }
+        .cv-box { transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+        .cv-box:hover { border-style: solid; border-color: var(--b); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--b); }
+        .kpi { transition: transform .2s ease, box-shadow .2s ease; }
+        .kpi:hover { border-style: solid; border-color: var(--c); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--c); }
+        .folder:hover .folder-body { border-style: solid; border-color: var(--ft); box-shadow: 7px 7px 0 0 var(--ft); }
+        .folder-body { transition: box-shadow .22s ease, border-color .22s ease; }
+        .media-tile:hover { box-shadow: 5px 5px 0 0 var(--ft, #BA6595); }
+        .cv-h2 .orn { transition: transform .4s ease; display: inline-block; }
+        .cv-sec:hover .cv-h2 .orn { transform: rotate(90deg) scale(1.15); color: #BA6595; }
         .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem;
                    border-bottom: 2px dotted var(--b); padding-bottom: .55rem; margin-bottom: .7rem; }
         .job-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; font-variation-settings: 'SOFT' 100; color: var(--c); }
@@ -104,7 +119,7 @@
         /* Barra compacta: no ocupa lugar en el flujo, se desliza desde arriba */
         .cv-mini-anchor { position: sticky; top: 0; height: 0; z-index: 25; }
         .cv-mini { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; gap: .75rem; padding: .65rem 1.25rem;
-                   background: rgba(228, 221, 203, .94); backdrop-filter: blur(8px); border-bottom: 2px dashed #E2D3D9;
+                   background: rgba(251, 246, 245, .94); backdrop-filter: blur(8px); border-bottom: 2px dashed #E2D3D9;
                    box-shadow: 0 6px 16px rgba(52,4,23,.06); transform: translateY(-110%); opacity: 0; pointer-events: none;
                    transition: transform .3s ease, opacity .3s ease; }
         .cv-mini.show { transform: none; opacity: 1; pointer-events: auto; }
@@ -116,7 +131,7 @@
         /* Contacto fijo abajo del CV */
         .cv-contact { position: sticky; bottom: 0; z-index: 20; margin-top: auto; padding: 1.5rem 1.5rem 1.25rem;
                       display: flex; flex-direction: column; align-items: center;
-                      background: linear-gradient(to top, rgba(228, 221, 203, .97) 55%, rgba(228, 221, 203, 0)); }
+                      background: linear-gradient(to top, rgba(251, 246, 245, .97) 55%, rgba(251, 246, 245, 0)); }
         .contact-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1.4rem; border-radius: 9999px; cursor: pointer;
                        background: #4C042D; color: #F0E9DA; font-weight: 700; font-size: 14px; border: 2px solid #4C042D;
                        box-shadow: 4px 4px 0 0 #EBD5E2; transition: transform .15s ease, box-shadow .15s ease; }
@@ -420,7 +435,7 @@
                 <h3 class="cv-h3">Augen Simes</h3>
                 <div class="job-card" style="--b:#A8919C;--s:#DCD0D4;--c:#3A1F2C;--bg:#F0EBEA" data-target="augen">
                     <div class="job-top">
-                        <h4 class="job-title" data-i18n="aug_t">Gerente de Diseño Gráfico & Account Mgr</h4>
+                        <h4 class="job-title" data-i18n="aug_t">Diseño gráfico y Project Management</h4>
                         <span class="job-date">Jul 2023 – Sep 2024</span>
                     </div>
                     <ul class="job-list">
@@ -629,7 +644,7 @@
             dis_t: 'Graphic Designer & Assistant',
             d1: '✦ Art Direction:', d1d: 'Concept and design of omnichannel assets for three apparel brands.',
             d2d: 'POP materials, signage and interior design for a physical outlet store.',
-            aug_t: 'Graphic Design Manager & Account Mgr',
+            aug_t: 'Graphic Design & Project Management',
             a1: '✦ B2B Accounts:', a1d: 'Commercial and operational project management for Andrómaco Laboratories, Galderma, Isdin and Danone.',
             a2d: 'Nationwide logistics coordination of creative teams and deliverable quality control.',
             a3d: 'Structural design of displays for brand visibility in pharmacies and retail.',
