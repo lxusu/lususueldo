@@ -244,6 +244,54 @@ window.GALLERIES['disenadora'] = {
                                            "name":  "VINILOS LOCALES",
                                            "items":  [
                                                          {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 2",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p02-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p02-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 7",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p07-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p07-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 10",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p10-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p10-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 11",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p11-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p11-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 12",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p12-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p12-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
+                                                             "t":  "img",
+                                                             "n":  "Guia vinilos - pagina 15",
+                                                             "th":  "assets/disenadora/03-campana-back-to-school/guia-p15-t.jpg",
+                                                             "f":  "assets/disenadora/03-campana-back-to-school/guia-p15-l.jpg",
+                                                             "w":  640,
+                                                             "h":  360
+                                                         },
+                                                         {
                                                              "t":  "pdf",
                                                              "n":  "BACK TO SCHOOL GUÍA",
                                                              "src":  "INDONESIA SHOP - DISEÑADORA/03. CAMPAÑA BACK TO SCHOOL/VINILOS LOCALES/BACK TO SCHOOL GUÍA.pdf"
