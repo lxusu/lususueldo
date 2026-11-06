@@ -517,7 +517,19 @@
             .hstk-star { right: 8%; top: 18%; }
             .mq-row { font-size: 2.4rem; }
         }
-    </style>
+
+        /* ===== Encabezado v3.1: sin recuadro ni marquesina; degradé rosado en toda la columna izquierda ===== */
+        .cv-header { background: transparent; border-radius: 0; margin: 0; padding: .5rem 1rem 1.25rem; overflow: visible; }
+        .cv-board { height: 240px; }
+        .bg-grid-pastel {
+            background-color: #FBF6F5;
+            background-image:
+                linear-gradient(to right, rgba(186, 101, 149, 0.12) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(186, 101, 149, 0.12) 1px, transparent 1px),
+                linear-gradient(180deg, #F2D7E3 0%, #F6E4EB 30%, #F9EFF2 60%, #FBF6F5 100%);
+            background-size: 20px 20px, 20px 20px, 100% 100%;
+        }
+        .cv-contact { background: rgba(251, 246, 245, .96); }    </style>
 </head>
 <body class="flex flex-col lg:flex-row w-full h-screen selection:bg-[#E19FC7] selection:text-[#340417]">
 
@@ -542,12 +554,6 @@
             <div class="lang-switch" role="group" aria-label="Idioma / Language">
                 <button type="button" data-lang="es" aria-pressed="true">ES</button>
                 <button type="button" data-lang="en" aria-pressed="false">EN</button>
-            </div>
-            <!-- Marquesina tenue detrás de los stickers -->
-            <div class="cv-marquee" aria-hidden="true">
-                <div class="mq-row"><div>DISEÑO · MARKETING · DIRECCIÓN DE ARTE · PERFORMANCE · DISEÑO · MARKETING · DIRECCIÓN DE ARTE · PERFORMANCE · </div></div>
-                <div class="mq-row mq-rev"><div>BRANDING · RETAIL · CONTENIDO · CAMPAÑAS · BRANDING · RETAIL · CONTENIDO · CAMPAÑAS · </div></div>
-                <div class="mq-row"><div>PAUTA · IDENTIDAD · VISUAL MERCHANDISING · PAUTA · IDENTIDAD · VISUAL MERCHANDISING · </div></div>
             </div>
             <!-- Zona de stickers -->
             <div class="cv-board">
