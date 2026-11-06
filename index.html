@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucía Sueldo | CV & Portfolio Interactivo</title>
+    <title>Lucía Sueldo | CV & Portfolio</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -611,7 +611,7 @@
 
                 <div class="job-card" style="--b:#EFCFDF;--c:#9E3F73;--bg:#FBF0F5" data-target="indonesia-diseno">
                     <div class="job-top">
-                        <h4 class="job-title" data-i18n="dis_t">Diseñadora Gráfica & Asistente</h4>
+                        <h4 class="job-title" data-i18n="dis_t">Diseñadora Gráfica & Asistente de Marketing</h4>
                         <span class="job-date">Sep 2024 – Oct 2025</span>
                     </div>
                     <ul class="job-list">
@@ -840,7 +840,7 @@
             c1: '✦ Strategy & Performance:', c1d: 'Commercial planning and conversion campaign management (Meta Ads, Google Ads) for e-commerce.',
             c2: '✦ Brand Management:', c2d: 'Operational lead for seasonal launches and ambassador coordination.',
             c3: '✦ AI & Data:', c3d: 'Integrated Claude and Gemini for metrics reporting and ad copywriting.',
-            dis_t: 'Graphic Designer & Assistant',
+            dis_t: 'Graphic Designer & Marketing Assistant',
             d1: '✦ Art Direction:', d1d: 'Concept and design of omnichannel assets for three apparel brands.',
             d2d: 'POP materials, signage and interior design for a physical outlet store.',
             aug_t: 'Graphic Design & Project Management',
@@ -871,7 +871,7 @@
             hs1v: '54.7M', hs1: 'Instagram views in one year', hs2: 'purchases driven by a single ad', hs3: 'design, campaign and retail projects',
             home_hint: 'Or pick an experience in the left column to see all the work.',
         };
-        const TITLES = { es: 'Lucía Sueldo | CV & Portfolio Interactivo', en: 'Lucía Sueldo | CV & Interactive Portfolio' };
+        const TITLES = { es: 'Lucía Sueldo | CV & Portfolio', en: 'Lucía Sueldo | CV & Portfolio' };
         const read = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
         const save = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
         function detect() {
@@ -1440,7 +1440,7 @@
             disenadora: {
                 pal: 0,
                 eyebrow: ['Indonesia Shop · Indonesia, Captain Fin, Zimith', 'Indonesia Shop · Indonesia, Captain Fin, Zimith'],
-                title: ['Diseñadora Gráfica & Asistente', 'Graphic Designer & Assistant'],
+                title: ['Diseñadora Gráfica & Asistente de Marketing', 'Graphic Designer & Marketing Assistant'],
                 sub: ['Sep 2024 – Oct 2025', 'Sep 2024 – Oct 2025'],
                 intro: [['Conceptualización y diseño de activos omnicanal para tres marcas de indumentaria.', 'Concept and design of omnichannel assets for three apparel brands.'],
                         ['Diseño de material POP, señalética e interiorismo para Outlet físico.', 'POP materials, signage and interior design for a physical outlet store.']],
@@ -1473,6 +1473,7 @@
                 },
                 years: {},
                 covers: ['02'],
+                hideFormats: true,   // misma agrupación por formato, sin el rótulo de medida
             },
         };
 
@@ -1662,7 +1663,7 @@
                         </header>
                         ${labels ? `<div class="sec-labels">${labels}</div>` : ''}${notes ? `<div class="sec-notes">${notes}</div>` : ''}
                         <div class="swiss">${blocks.map(b =>
-                            (blocks.length > 1 ? `<div class="fmt-label">${b[L()]} · ${b.items.length}</div>` : '') +
+                            (blocks.length > 1 && !cfg.hideFormats ? `<div class="fmt-label">${b[L()]} · ${b.items.length}</div>` : '') +
                             b.items.map(it => { ordered.push(it); return PF.tileHTML(it, ordered.length - 1, pal, b.sp, b.ar); }).join('')
                         ).join('')}${pdfs.map(p => `<a class="pdf-tile sp-6" href="${p.url}" target="_blank" rel="noopener" download>
                             <span class="pdf-ico">PDF</span><span><b>${esc(t('Guía de instalación de vinilos', 'Vinyl installation guide'))}</b><small>${t('Descargar guía completa · PDF', 'Download full guide · PDF')}</small></span></a>`).join('')}</div>
