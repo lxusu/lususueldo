@@ -468,6 +468,55 @@
         .home-tile:hover .home-arrow { opacity: 1; transform: none; }
         .home-hint { margin-top: 1.4rem; font-size: 13px; color: #6A5060; }
         #state-initial:not(.hidden) { display: block; }
+
+        /* ===== Encabezado v3: zona de stickers (nombre en Pirata One) + marquesina tenue ===== */
+        .cv-header { flex: none; position: relative; overflow: hidden; margin: .9rem .9rem 0; padding: 0 1rem 1.4rem; border-radius: 1.75rem;
+                     text-align: center; color: #340417; background-color: #F3E4EA; background-image: none; }
+        .cv-header .lang-switch { z-index: 6; background: #fff; border: 1px solid #E3CBD6; }
+        .cv-header .lang-switch button { color: #4C042D; }
+        .cv-header .lang-switch button:hover { background: #F8EFF3; }
+        .cv-header .lang-switch button[aria-pressed="true"] { background: #4C042D; color: #fff; }
+        .cv-marquee { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: .15rem; pointer-events: none; }
+        .mq-row { white-space: nowrap; font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 3.1rem; line-height: 1; letter-spacing: -.02em;
+                  color: rgba(186, 101, 149, .16); }
+        .mq-row > div { display: inline-block; animation: cvMarquee 48s linear infinite; }
+        .mq-row.mq-rev > div { animation-direction: reverse; animation-duration: 56s; }
+        @keyframes cvMarquee { to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) { .mq-row > div { animation: none; } }
+        .cv-board { position: relative; z-index: 2; height: 250px; }
+        /* Sticker base: borde blanco troquelado + sombra suave, inclinado; se endereza en hover */
+        .hstk { position: absolute; margin: 0; display: inline-block; background: #fff; padding: 5px; border-radius: 10px;
+                box-shadow: 0 6px 16px rgba(52, 4, 23, .16); transform: rotate(var(--r, 0deg)); transition: transform .25s ease; }
+        .hstk > span { display: block; border-radius: 6px; white-space: nowrap; }
+        .hstk:hover { transform: rotate(0deg) scale(1.05); z-index: 5; }
+        .cv-name { left: 50%; top: 47%; --r: -4deg; transform: translate(-50%, -50%) rotate(var(--r)); z-index: 3; }
+        .cv-name:hover { transform: translate(-50%, -50%) rotate(0deg) scale(1.03); }
+        .cv-name > span { font-family: 'Pirata One', serif; font-weight: 400; font-style: normal; letter-spacing: .01em; text-shadow: none;
+                          font-size: clamp(2.7rem, 4.4vw, 3.9rem); line-height: 1; color: #fff; background: #4C042D; padding: .3rem 1.1rem .4rem; }
+        .hstk-pf { left: 8%; top: 13%; --r: -9deg; }
+        .hstk-pf > span { font-family: 'Pirata One', serif; font-size: 1.55rem; line-height: 1; color: #9E3F73; background: #F0D3E4; padding: .2rem .65rem .3rem; }
+        .hstk-star { right: 13%; top: 15%; --r: 14deg; border-radius: 9999px; }
+        .hstk-star > span { width: 2.3rem; height: 2.3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+                            font-size: 1.35rem; color: #C9A15B; background: #130E12; }
+        .hstk-tag { right: 7%; bottom: 12%; --r: 3deg; z-index: 4; }
+        .hstk-tag > span { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+                           color: #340417; background: #F0D3E4; padding: .5rem .85rem; }
+        .hstk-loc { left: 10%; bottom: 15%; --r: -4deg; }
+        .hstk-loc > span { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+                           color: #fff; background: #130E12; padding: .45rem .8rem; }
+        .cv-header-foot { position: relative; z-index: 2; margin-top: 0; }
+        .contact-top { background: #4C042D; color: #fff; box-shadow: 0 6px 16px rgba(76, 4, 45, .22); }
+        .contact-top:hover { background: #340417; }
+        .cv-mini-name { font-family: 'Pirata One', serif; font-size: 1.6rem; color: #4C042D; }
+        @media (max-width: 640px) {
+            .cv-board { height: 270px; }
+            .cv-name > span { font-size: 2.6rem; }
+            .hstk-pf { left: 5%; top: 10%; }
+            .hstk-tag { right: 4%; bottom: 9%; }
+            .hstk-loc { left: 5%; bottom: 25%; }
+            .hstk-star { right: 8%; top: 18%; }
+            .mq-row { font-size: 2.4rem; }
+        }
     </style>
 </head>
 <body class="flex flex-col lg:flex-row w-full h-screen selection:bg-[#E19FC7] selection:text-[#340417]">
@@ -494,10 +543,21 @@
                 <button type="button" data-lang="es" aria-pressed="true">ES</button>
                 <button type="button" data-lang="en" aria-pressed="false">EN</button>
             </div>
-            <h1 class="cv-name">Lucía Sueldo</h1>
-            <p class="cv-tagline" data-i18n="tagline">Dirección de Diseño & Marketing</p>
+            <!-- Marquesina tenue detrás de los stickers -->
+            <div class="cv-marquee" aria-hidden="true">
+                <div class="mq-row"><div>DISEÑO · MARKETING · DIRECCIÓN DE ARTE · PERFORMANCE · DISEÑO · MARKETING · DIRECCIÓN DE ARTE · PERFORMANCE · </div></div>
+                <div class="mq-row mq-rev"><div>BRANDING · RETAIL · CONTENIDO · CAMPAÑAS · BRANDING · RETAIL · CONTENIDO · CAMPAÑAS · </div></div>
+                <div class="mq-row"><div>PAUTA · IDENTIDAD · VISUAL MERCHANDISING · PAUTA · IDENTIDAD · VISUAL MERCHANDISING · </div></div>
+            </div>
+            <!-- Zona de stickers -->
+            <div class="cv-board">
+                <span class="hstk hstk-pf" aria-hidden="true"><span>Portfolio</span></span>
+                <span class="hstk hstk-star" aria-hidden="true"><span>★</span></span>
+                <h1 class="hstk cv-name"><span>Lucía Sueldo</span></h1>
+                <p class="hstk hstk-tag"><span data-i18n="tagline">Dirección de Diseño & Marketing</span></p>
+                <p class="hstk hstk-loc"><span data-i18n="location">Argentina</span></p>
+            </div>
             <div class="cv-header-foot">
-                <p class="cv-loc" data-i18n="location">Argentina</p>
                 <button type="button" class="contact-trigger contact-top" aria-haspopup="dialog"><span aria-hidden="true">✉</span> <span data-i18n="contact_cta">¿Trabajamos juntos? Contactame</span></button>
             </div>
         </header>
